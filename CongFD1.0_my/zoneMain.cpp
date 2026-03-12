@@ -141,6 +141,7 @@ void configureCase(Info* info, int choice) {
             info->nCase = 4;
             info->calZone = { 0, 1, 0, 0, 0, 0 };
             info->iMax = { 401, 2, 2 };
+            // info->iMax = { 2001, 2, 2 };
             // info->iMax = { 4001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Woodward-Colella problem\n";
@@ -281,7 +282,8 @@ int main()
     // info->interMethod = TCNS5; //【TENO】 Teno5_Z
 
     // info->interMethod = WCNS5CONGZ;//【TENO-S】   Teno5_CongZ
-    // info->interMethod = WHFTCNSA; //【TENO-A】TENO-A
+    // 临时改成5-9
+    info->interMethod = WHFTCNSA; //【TENO-A】TENO-A
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
     // info->interMethod = WHFTCNSASF102;
@@ -306,7 +308,7 @@ int main()
     // info->interMethod = temp015; //3_5_9的插值加上记录max chi的值
 
     // LAD 
-    info->interMethod = WHFTCNSLADSFf2_5_10; //
+    // info->interMethod = WHFTCNSLADSFf2_5_10; //
     // info->interMethod = WHFTCNSLAD;
     // info->interMethod = WHFTCNSLADS_g1; //是没进行优化的WHFTCNSLAD
     // info->interMethod = temp019;
@@ -324,10 +326,10 @@ int main()
     // --------------------------- 算例选项 --------------------------- 
     const int presetCase = 
         // 0;  // Sod
-        1;  // ShuOsher
+        // 1;  // ShuOsher
         // 2;  // Lax
         // 3;  // Sedov
-        // 4;  // Woodward_Colella
+        4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
 
         // 10; // 2D_Riemann_1

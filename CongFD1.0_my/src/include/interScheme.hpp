@@ -1427,7 +1427,8 @@ constexpr real whf_TCNS_A(std::array<real, 5> q)
     real tau = std::abs(beta[2] - beta[0]);
 
     // 计算自适应阈值CT_A
-    real alpha1 = 10.0, alpha2 = 5.0;  //参数
+    // real alpha1 = 10.0, alpha2 = 5.0;  //参数
+    real alpha1 = 9.0, alpha2 = 4.0;  //参数
     // real xi = 1e-3, C_r = 0.24;
     // real epsilon_A = (0.9*C_r)/(1.0 - 0.9*C_r)*xi*xi;
     real epsilon_A = 2.7551*1e-7;
