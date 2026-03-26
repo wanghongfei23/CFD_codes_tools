@@ -1,0 +1,20 @@
+<map id="src/include/Bnds.hpp" name="src/include/Bnds.hpp">
+<area shape="rect" id="Node000001" title="定义边界条件管理类" alt="" coords="316,5,459,32"/>
+<area shape="rect" id="Node000002" href="$df/d64/initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="172,155,336,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="333,40,307,58,281,82,271,99,263,119,257,155,252,153,258,118,266,97,277,78,304,54,338,37"/>
+<area shape="rect" id="Node000007" href="$dc/d9c/sp__distributor_8hpp.html" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="292,80,483,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="389,46,390,81,385,78,386,50"/>
+<area shape="rect" id="Node000009" href="$d5/d13/bnds_8cpp.html" title="边界条件管理类的实现文件" alt="" coords="507,80,625,107"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="432,35,537,79,532,80,432,41"/>
+<area shape="rect" id="Node000003" href="$dd/dcb/block_solver_8hpp.html" title=" " alt="" coords="71,229,252,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,190,179,231,176,227,224,193"/>
+<area shape="rect" id="Node000006" href="$d5/de2/initializer_8cpp.html" title="初始化器类的实现文件" alt="" coords="276,229,418,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="283,189,334,229,328,229,281,194"/>
+<area shape="rect" id="Node000004" href="$da/d96/block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,304,164,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="140,266,99,306,96,301,135,268"/>
+<area shape="rect" id="Node000005" href="$df/d44/zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="188,304,290,331"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="187,264,229,304,223,303,185,269"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="349,116,279,156,276,152,353,113"/>
+<area shape="rect" id="Node000008" href="$d6/d9c/sp__distributor_8cpp.html" title="空间分布器类的实现文件" alt="" coords="360,155,529,181"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="407,116,437,155,432,154,406,122"/>
+</map>

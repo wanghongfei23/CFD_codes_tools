@@ -20,6 +20,15 @@ inline real_t Teno5_CongZ(const std::array<real_t, 5>& q)
         1.0Q / 1.0Q * powq(1.0Q * q[1] - 2.0Q * q[2] + 1.0Q * q[3], 2) + 1.0Q / 4.0Q * powq(1.0Q * q[1] + 0.0Q * q[2] - 1.0Q * q[3], 2),
         1.0Q / 1.0Q * powq(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2) + 1.0Q / 4.0Q * powq(3.0Q * q[2] - 4.0Q * q[3] + 1.0Q * q[4], 2)
     };
+
+    beta[0] = 1.0Q / 1.0Q * pow(1.0Q * q[0] - 2.0Q * q[1] + 1.0Q * q[2], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[0] + 0.0Q * q[1] - 1.0Q * q[2], 2);
+
+    beta[1] = 1.0Q / 1.0Q * pow(1.0Q * q[1] - 2.0Q * q[2] + 1.0Q * q[3], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[1] + 0.0Q * q[2] - 1.0Q * q[3], 2);
+
+    beta[2] = 1.0Q / 1.0Q * pow(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[2] + 0.0Q * q[3] - 1.0Q * q[4], 2);
     // 找到最小的光滑指示子索引
     unsigned short minBeta = std::min_element(beta.begin(), beta.end()) - beta.begin();
     // constexpr real_t CT = powq(1.5 * 1.0e-5, 1.0 / 6.0);
@@ -382,10 +391,86 @@ inline real_t whf_TcnsN_myASF3_5_9(std::array<real_t, 5> q)
 }
 
 
+// temp
+inline real_t weno5_Z(std::array<real_t, 5> q) 
+{
+    real_t eps = 1e-40;
+    std::array<real_t, 3> gamma = { 1.0Q / 16.0Q, 5.0Q / 8.0Q, 5.0Q / 16.0Q };
+    std::array<real_t, 3> beta;
+    // beta[0] = 1.0Q / 1.0Q * pow(1.0Q * q[0] - 2.0Q * q[1] + 1.0Q * q[2], 2)
+    //     + 1.0Q / 4.0Q * pow(1.0Q * q[0] - 4.0Q * q[1] + 3.0Q * q[2], 2);
+
+    beta[0] = 1.0Q / 1.0Q * pow(1.0Q * q[0] - 2.0Q * q[1] + 1.0Q * q[2], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[0] + 0.0Q * q[1] - 1.0Q * q[2], 2);
+
+    beta[1] = 1.0Q / 1.0Q * pow(1.0Q * q[1] - 2.0Q * q[2] + 1.0Q * q[3], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[1] + 0.0Q * q[2] - 1.0Q * q[3], 2);
+
+    beta[2] = 1.0Q / 1.0Q * pow(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[2] + 0.0Q * q[3] - 1.0Q * q[4], 2);
+
+    // beta[2] = 1.0Q / 1.0Q * pow(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2)
+    //     + 1.0Q / 4.0Q * pow(3.0Q * q[2] - 4.0Q * q[3] + 1.0Q * q[4], 2);
+
+    std::array<real_t, 3> u;
+    u[0] = 3.0Q / 8.0Q * q[0] - 5.0Q / 4.0Q * q[1] + 15.0Q / 8.0Q * q[2];
+    u[1] = -1.0Q / 8.0Q * q[1] + 3.0Q / 4.0Q * q[2] + 3.0Q / 8.0Q * q[3];
+    u[2] = 3.0Q / 8.0Q * q[2] + 3.0Q / 4.0Q * q[3] - 1.0Q / 8.0Q * q[4];
+
+    // std::array<real_t(*)(real_t,real_t,real_t),3> u={&u1,&u2,&u3};
 
 
+    real_t sumbeta = 0, result = 0;
+    real_t C = 1, qq = 2, tau = std::abs(beta[2] + 2.0*beta[1]- beta[0]);
+    for (int i = 0; i < 3; i++) {
+        beta[i] = gamma[i] * (C + pow(tau / (beta[i] + eps), qq));
+        sumbeta += beta[i];
+    }
+    for (int i = 0; i < 3; i++)
+        result += beta[i] * u[i];
+    return result / sumbeta;
+}
 
 
+inline real_t weno5_JSchen(std::array<real_t, 5> q) 
+{
+    real_t eps = 1e-6;
+    std::array<real_t, 3> gamma = { 1.0Q / 16.0Q, 5.0Q / 8.0Q, 5.0Q / 16.0Q };
+    std::array<real_t, 3> beta;
+    beta[0] = 1.0Q / 1.0Q * pow(1.0Q * q[0] - 2.0Q * q[1] + 1.0Q * q[2], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[0] - 4.0Q * q[1] + 3.0Q * q[2], 2);
+
+    beta[1] = 1.0Q / 1.0Q * pow(1.0Q * q[1] - 2.0Q * q[2] + 1.0Q * q[3], 2)
+        + 1.0Q / 4.0Q * pow(1.0Q * q[1] + 0.0Q * q[2] - 1.0Q * q[3], 2);
+
+    beta[2] = 1.0Q / 1.0Q * pow(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2)
+        + 1.0Q / 4.0Q * pow(3.0Q * q[2] - 4.0Q * q[3] + 1.0Q * q[4], 2);
+
+    // beta[0] = 1.0Q / 1.0Q * pow(1.0Q * q[0] - 2.0Q * q[1] + 1.0Q * q[2], 2)
+    //     + 1.0Q / 4.0Q * pow(1.0Q * q[0] + 0.0Q * q[1] - 1.0Q * q[2], 2);
+
+    // beta[1] = 1.0Q / 1.0Q * pow(1.0Q * q[1] - 2.0Q * q[2] + 1.0Q * q[3], 2)
+    //     + 1.0Q / 4.0Q * pow(1.0Q * q[1] + 0.0Q * q[2] - 1.0Q * q[3], 2);
+
+    // beta[2] = 1.0Q / 1.0Q * pow(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2)
+    //     + 1.0Q / 4.0Q * pow(1.0Q * q[2] + 0.0Q * q[3] - 1.0Q * q[4], 2);
+
+    std::array<real_t, 3> u;
+    u[0] = 3.0Q / 8.0Q * q[0] - 5.0Q / 4.0Q * q[1] + 15.0Q / 8.0Q * q[2];
+    u[1] = -1.0Q / 8.0Q * q[1] + 3.0Q / 4.0Q * q[2] + 3.0Q / 8.0Q * q[3];
+    u[2] = 3.0Q / 8.0Q * q[2] + 3.0Q / 4.0Q * q[3] - 1.0Q / 8.0Q * q[4];
+
+    // std::array<real_t(*)(real_t,real_t,real_t),3> u={&u1,&u2,&u3};
+
+    real_t sumbeta = 0, result = 0;
+    for (int i = 0; i < 3; i++) {
+        beta[i] = gamma[i] / pow(eps + beta[i], 2);
+        sumbeta += beta[i];
+    }
+    for (int i = 0; i < 3; i++)
+        result += beta[i] * u[i];
+    return result / sumbeta;
+}
 
 
 

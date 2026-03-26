@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['data_0',['Data',['../dc/d07/class_data.html',1,'Data'],['../dc/d07/class_data.html#af11f741cb7f587e2e495452a8905a22a',1,'Data::Data()'],['../dc/d07/class_data.html#a3aacaba634a528d011fcb79cea1a1293',1,'Data::Data(int, int)'],['../dc/d07/class_data.html#aa7a5bd3a55e7e04904169e19d2d8c260',1,'Data::Data(const Data &amp;)']]],
+  ['data_2ecpp_1',['data.cpp',['../da/dc9/data_8cpp.html',1,'']]],
+  ['data_2ecpp_2eo_2ed_2',['data.cpp.o.d',['../d4/d9c/data_8cpp_8o_8d.html',1,'']]],
+  ['data_2ehpp_3',['data.hpp',['../da/d85/data_8hpp.html',1,'']]],
+  ['dec_4',['DEC',['../da/d01/release_2_c_make_files_24_80_81_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCCompilerId.c'],['../d1/dcf/release_2_c_make_files_24_80_81_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCXXCompilerId.cpp'],['../d6/d27/utils_2exact_sol_burgers_2build_2_c_make_files_23_829_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCCompilerId.c'],['../d3/d08/utils_2exact_sol_burgers_2build_2_c_make_files_23_829_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCXXCompilerId.cpp'],['../d5/d6b/utils_2roefluxtest_2build_2_c_make_files_23_829_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCCompilerId.c'],['../df/d15/utils_2roefluxtest_2build_2_c_make_files_23_829_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCXXCompilerId.cpp'],['../da/dc6/utils_2to_tec1_d_2build_2_c_make_files_23_829_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCCompilerId.c'],['../d3/df1/utils_2to_tec1_d_2build_2_c_make_files_23_829_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC:&#160;CMakeCXXCompilerId.cpp']]],
+  ['defaultbndtype_5',['defaultBndType',['../db/d9e/class_info.html#ab8d93ab23876afb8d3d915125e5744bc',1,'Info']]],
+  ['df_6',['df',['../d9/dfa/exact_sol_burgers_2main_8cpp.html#a5bde4ffd848500850efa224a7dafa7ec',1,'df(double theta, double x, double t):&#160;main.cpp'],['../d6/d1b/main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92',1,'df(double x, double u, double t):&#160;main2.cpp']]],
+  ['dgkx_7',['dgkx',['../dc/d7c/_accuracy_test_8cpp.html#a7b3e4e2024848b18fa90d79c36cbb93b',1,'AccuracyTest.cpp']]],
+  ['differ_8',['Differ',['../dd/dd0/class_differ.html',1,'']]],
+  ['differ_2ehpp_9',['differ.hpp',['../db/d5a/differ_8hpp.html',1,'']]],
+  ['difference_10',['difference',['../d1/d6e/class_space_dis.html#a3c563bda4d46190cc899af410bdc0cf7',1,'SpaceDis']]],
+  ['diffmethod_11',['DiffMethod',['../d4/dc3/macro_8hpp.html#a42aac0a87a6871f720f74d0bc65bc884',1,'macro.hpp']]],
+  ['diffmethod_12',['diffMethod',['../db/d9e/class_info.html#a6f7ca1d47f687dc7426f73d5d39d5a8f',1,'Info']]],
+  ['dim_13',['dim',['../d2/df8/class_block.html#a47ca7e1638a9d6013b587cf9f2284b76',1,'Block::dim'],['../dd/d6b/class_equation.html#a0ba1350ce32a877e0645f9ebbeace8d2',1,'Equation::dim'],['../db/d9e/class_info.html#a4445348ed3bdd4a0b8326f9e18fa7b9b',1,'Info::dim']]],
+  ['dim_201_14',['一维问题 (dim=1)',['../dir_1242f034e79c01649acb89d0581141f0.html#autotoc_md10',1,'']]],
+  ['dim_202_15',['二维问题 (dim=2)',['../dir_1242f034e79c01649acb89d0581141f0.html#autotoc_md11',1,'']]],
+  ['diriclet_16',['DIRICLET',['../d4/dc3/macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a06592af41b414337e04f7d9d4ab3188c',1,'macro.hpp']]],
+  ['diriclet_5fsodl_17',['DIRICLET_SODL',['../d4/dc3/macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950abc73df3fd4e7b1936ae23dfbb096b585',1,'macro.hpp']]],
+  ['diriclet_5fsodr_18',['DIRICLET_SODR',['../d4/dc3/macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a32b4b54c692e9f705460202b44344e2f',1,'macro.hpp']]],
+  ['doublemachup_19',['DoubleMachUp',['../d4/dc3/macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657',1,'macro.hpp']]],
+  ['dt_20',['dt',['../db/d9e/class_info.html#af64bf2affb4a2b19897b71d22154f563',1,'Info']]],
+  ['du0_21',['du0',['../d9/dfa/exact_sol_burgers_2main_8cpp.html#a2df4d72953405bafb738b3b8054087ec',1,'du0(double x):&#160;main.cpp'],['../d6/d1b/main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984',1,'du0(double x, double u, double t):&#160;main2.cpp']]]
+];

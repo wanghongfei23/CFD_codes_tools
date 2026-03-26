@@ -346,11 +346,11 @@ real_t exact_initial_solution(real_t x, real_t /*t*/)
     // u(x, t) = e^(-300 * (x - x_c)^2) where x_c = 0.5
 
     // 02 - 线性平流问题-Linear advection problem
-    real_t x_c = 0.5Q;
-    return expq(-300.0Q * (x - x_c) * (x - x_c));
+    // real_t x_c = 0.5Q;
+    // return expq(-300.0Q * (x - x_c) * (x - x_c));
 
     // 01 - 代数测试函数-Algebraic function test
-    // return x * x * expq(0.75Q * (x - 1.0Q));
+    return x * x * expq(0.75Q * (x - 1.0Q));
 
     // return x;
 }
@@ -382,9 +382,9 @@ real_t exact_deriv(real_t x, real_t /*t*/)
 real_t exact_solution(real_t x, real_t /*t*/)
 {
     // 002
-    return exact_initial_solution(x, 0.0Q);
+    // return exact_initial_solution(x, 0.0Q);
     // 001
-    // return exact_deriv(x, 0.0Q);
+    return exact_deriv(x, 0.0Q);
 }
 
 /**
@@ -460,8 +460,8 @@ void compute_rhs(GhostArray& rhs, GhostArray& u, GhostArray& flux, real_t dx)
         // real_t u_right = whf_TcnsN_myASF3_5_10_noTimeDev(q_right);
         // real_t u_left = whf_TcnsN_myASF3_5_9(q_left);
         // real_t u_right = whf_TcnsN_myASF3_5_9(q_right);
-        real_t u_left = Linear_5th(q_left);
-        real_t u_right = Linear_5th(q_right);
+        real_t u_left = weno5_JSchen(q_left);
+        real_t u_right = weno5_JSchen(q_right);
 
         // 一阶插值:取左右平均值
         // if (c > 0) {

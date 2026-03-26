@@ -1,0 +1,9 @@
+<map id="utils/testcgns/write_grid_str.c" name="utils/testcgns/write_grid_str.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="56,5,188,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,66,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,48,62,87,58,83,97,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,96,154,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,47,125,81,120,79,120,51"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="179,96,252,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,46,192,85,187,86,145,51"/>
+</map>

@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CongFD1.0_my: BlockSolver类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CongFD1.0_my<span id="projectnumber">&#160;v0.0.0</span>
+   </div>
+   <div id="projectbrief">可压缩流计算程序</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d0/d8e/class_block_solver.html','../../','d9/d1b/class_block_solver-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BlockSolver类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>区块求解器类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../dd/dcb/block_solver_8hpp_source.html">blockSolver.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae184bae9628dd79ce563c131fa51d8cf" id="r_ae184bae9628dd79ce563c131fa51d8cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver</a> ()</td></tr>
+<tr class="memdesc:ae184bae9628dd79ce563c131fa51d8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <br /></td></tr>
+<tr class="memitem:a6ef07942b5ef3ed920aa4dc38264f9c4" id="r_a6ef07942b5ef3ed920aa4dc38264f9c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ef07942b5ef3ed920aa4dc38264f9c4">BlockSolver</a> (<a class="el" href="../../db/d9e/class_info.html">Info</a> *)</td></tr>
+<tr class="memdesc:a6ef07942b5ef3ed920aa4dc38264f9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">带参数的构造函数  <br /></td></tr>
+<tr class="memitem:ae372dfb8d712322916273f5352d17096" id="r_ae372dfb8d712322916273f5352d17096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae372dfb8d712322916273f5352d17096">solve</a> (<a class="el" href="../../d4/dc3/macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memdesc:ae372dfb8d712322916273f5352d17096"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行求解过程  <br /></td></tr>
+<tr class="memitem:a60c053f7a38083aab6f25dc48515122a" id="r_a60c053f7a38083aab6f25dc48515122a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60c053f7a38083aab6f25dc48515122a">~BlockSolver</a> ()</td></tr>
+<tr class="memdesc:a60c053f7a38083aab6f25dc48515122a"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="memitem:a0f29b8074f5d43e176ac656f084a025d" id="r_a0f29b8074f5d43e176ac656f084a025d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f29b8074f5d43e176ac656f084a025d">outputGrid</a> ()</td></tr>
+<tr class="memdesc:a0f29b8074f5d43e176ac656f084a025d"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出网格信息  <br /></td></tr>
+<tr class="memitem:add03b267a1937f5f9ab38e6e81cc0d7c" id="r_add03b267a1937f5f9ab38e6e81cc0d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add03b267a1937f5f9ab38e6e81cc0d7c">outputCons</a> ()</td></tr>
+<tr class="memdesc:add03b267a1937f5f9ab38e6e81cc0d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出守恒变量  <br /></td></tr>
+<tr class="memitem:a21dc82d623d574bee297b9a57006a8b4" id="r_a21dc82d623d574bee297b9a57006a8b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21dc82d623d574bee297b9a57006a8b4">outputPrim</a> ()</td></tr>
+<tr class="memdesc:a21dc82d623d574bee297b9a57006a8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出原始变量  <br /></td></tr>
+<tr class="memitem:a95f73fc2b0bba0b24da3eab91f84ac15" id="r_a95f73fc2b0bba0b24da3eab91f84ac15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f73fc2b0bba0b24da3eab91f84ac15">stepsLoop</a> ()</td></tr>
+<tr class="memdesc:a95f73fc2b0bba0b24da3eab91f84ac15"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间步循环  <br /></td></tr>
+<tr class="memitem:ae641ab097ce6fd1402bc2a411828ae92" id="r_ae641ab097ce6fd1402bc2a411828ae92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae641ab097ce6fd1402bc2a411828ae92">stepsLoopCFL</a> ()</td></tr>
+<tr class="memdesc:ae641ab097ce6fd1402bc2a411828ae92"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于CFL条件的时间步循环  <br /></td></tr>
+<tr class="memitem:a736738d2e404c1e60714d603303a5004" id="r_a736738d2e404c1e60714d603303a5004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736738d2e404c1e60714d603303a5004">stepsLoopDTS</a> ()</td></tr>
+<tr class="memdesc:a736738d2e404c1e60714d603303a5004"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于固定时间步长的时间步循环  <br /></td></tr>
+<tr class="memitem:a105bdac2459eedfccd45c99eb4197c5a" id="r_a105bdac2459eedfccd45c99eb4197c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105bdac2459eedfccd45c99eb4197c5a">Test</a> ()</td></tr>
+<tr class="memdesc:a105bdac2459eedfccd45c99eb4197c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试函数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a81fe908d17b9bd8de6ded969206c9391" id="r_a81fe908d17b9bd8de6ded969206c9391"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81fe908d17b9bd8de6ded969206c9391">timesteps</a> =0</td></tr>
+<tr class="memdesc:a81fe908d17b9bd8de6ded969206c9391"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间步数计数器  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>区块求解器类 </p>
+<p>该类负责管理CFD计算的主要流程，包括初始化、时间推进、输出等核心功能。 它集成了网格读写、方程求解、边界条件处理等功能模块。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../dd/dcb/block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="../../dd/dcb/block_solver_8hpp_source.html#l00012">12</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ae184bae9628dd79ce563c131fa51d8cf" name="ae184bae9628dd79ce563c131fa51d8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae184bae9628dd79ce563c131fa51d8cf">&#9670;&#160;</a></span>BlockSolver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认构造函数 </p>
+<p>BlockSolver类的默认构造函数</p>
+<p>初始化求解器所需的各个组件，包括：</p><ul>
+<li><a class="el" href="../../db/d9e/class_info.html" title="存储和管理求解器的各种配置参数和状态信息">Info</a>: 求解器参数信息</li>
+<li><a class="el" href="../../d2/df8/class_block.html" title="Block类，用于管理计算域中的网格块">Block</a>: 网格数据块</li>
+<li><a class="el" href="../../df/dca/class_initializer.html" title="初始化器类">Initializer</a>: 初始化器</li>
+<li><a class="el" href="../../dd/d6b/class_equation.html" title="方程类，用于处理不同类型方程的守恒变量与原始变量之间的转换">Equation</a>: 方程求解器</li>
+<li><a class="el" href="../../d9/d7f/class_bnds.html" title="边界条件管理类">Bnds</a>: 边界条件处理器</li>
+<li><a class="el" href="../../d2/d7f/class_sp_distributor.html" title="空间分布器类">SpDistributor</a>: 空间离散分配器</li>
+<li><a class="el" href="../../d9/def/class_source_term.html">SourceTerm</a>: 源项计算器</li>
+</ul>
+<p>并调用初始化器对这些组件进行初始化。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6ef07942b5ef3ed920aa4dc38264f9c4" name="a6ef07942b5ef3ed920aa4dc38264f9c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef07942b5ef3ed920aa4dc38264f9c4">&#9670;&#160;</a></span>BlockSolver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d9e/class_info.html">Info</a> *</td>          <td class="paramname"><span class="paramname"><em>info_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>带参数的构造函数 </p>
+<p>BlockSolver类的带参构造函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>指向信息对象的指针，包含求解所需的各种参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>使用传入的Info对象初始化求解器，其余初始化过程与默认构造函数相同。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info_</td><td>指向Info对象的指针，包含求解器参数信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a60c053f7a38083aab6f25dc48515122a" name="a60c053f7a38083aab6f25dc48515122a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60c053f7a38083aab6f25dc48515122a">&#9670;&#160;</a></span>~BlockSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::~BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+<p>BlockSolver类的析构函数</p>
+<p>释放所有动态分配的内存资源。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00211">211</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="add03b267a1937f5f9ab38e6e81cc0d7c" name="add03b267a1937f5f9ab38e6e81cc0d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add03b267a1937f5f9ab38e6e81cc0d7c">&#9670;&#160;</a></span>outputCons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputCons </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出守恒变量 </p>
+<p>输出守恒变量到CGNS文件 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00233">233</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0f29b8074f5d43e176ac656f084a025d" name="a0f29b8074f5d43e176ac656f084a025d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f29b8074f5d43e176ac656f084a025d">&#9670;&#160;</a></span>outputGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputGrid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出网格信息 </p>
+<p>输出网格信息到CGNS文件 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00225">225</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00254">stepsLoop()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00293">stepsLoopCFL()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00422">stepsLoopDTS()</a> , 以及 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00371">Test()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph.svg" width="502" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a21dc82d623d574bee297b9a57006a8b4" name="a21dc82d623d574bee297b9a57006a8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21dc82d623d574bee297b9a57006a8b4">&#9670;&#160;</a></span>outputPrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputPrim </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出原始变量 </p>
+<p>输出原始变量到CGNS文件</p>
+<p>首先将守恒变量转换为原始变量，然后输出到CGNS文件。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00243">243</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00254">stepsLoop()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00293">stepsLoopCFL()</a> , 以及 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00422">stepsLoopDTS()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph.svg" width="506" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae372dfb8d712322916273f5352d17096" name="ae372dfb8d712322916273f5352d17096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae372dfb8d712322916273f5352d17096">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/dc3/macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行求解过程 </p>
+<p>执行单步时间推进</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>时间步长或相关参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>根据设定的时间积分方法执行一步时间推进计算。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00200">200</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00008">real</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00254">stepsLoop()</a> , 以及 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00293">stepsLoopCFL()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_ae372dfb8d712322916273f5352d17096_icgraph.svg" width="471" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a95f73fc2b0bba0b24da3eab91f84ac15" name="a95f73fc2b0bba0b24da3eab91f84ac15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f73fc2b0bba0b24da3eab91f84ac15">&#9670;&#160;</a></span>stepsLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时间步循环 </p>
+<p>基于固定步数的时间步进循环</p>
+<p>按照固定的步数进行时间推进，每隔一定步数输出一次结果。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00254">254</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00225">outputGrid()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00243">outputPrim()</a>, <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00008">real</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00200">solve()</a> , 以及 <a class="el" href="../../dd/dcb/block_solver_8hpp_source.html#l00038">timesteps</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../df/d44/zone_main_8cpp_source.html#l00250">main()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph.svg" width="380" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph.svg" width="268" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae641ab097ce6fd1402bc2a411828ae92" name="ae641ab097ce6fd1402bc2a411828ae92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae641ab097ce6fd1402bc2a411828ae92">&#9670;&#160;</a></span>stepsLoopCFL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoopCFL </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>基于CFL条件的时间步循环 </p>
+<p>基于CFL条件控制时间步长的求解循环</p>
+<p>此函数实现了基于CFL条件的自适应时间步长求解循环。在每次迭代中：</p><ol type="1">
+<li>检查是否需要输出当前结果</li>
+<li>计算满足CFL条件的最大时间步长</li>
+<li>根据输出间隔调整时间步长</li>
+<li>执行一次时间步进求解</li>
+<li>更新时间和步数计数器</li>
+<li>输出当前求解状态信息 循环持续到达到设定的结束步数为止。</li>
+</ol>
+<dl class="section note"><dt>注解</dt><dd>该方法使用可变时间步长，确保数值稳定性 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>getTimeIntervalExplicit() 获取满足CFL条件的时间步长 </dd>
+<dd>
+<a class="el" href="#ae372dfb8d712322916273f5352d17096" title="执行求解过程">solve()</a> 执行单步求解 </dd>
+<dd>
+<a class="el" href="#a0f29b8074f5d43e176ac656f084a025d" title="输出网格信息">outputGrid()</a> 输出网格信息 </dd>
+<dd>
+<a class="el" href="#a21dc82d623d574bee297b9a57006a8b4" title="输出原始变量">outputPrim()</a> 输出原始变量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00293">293</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00225">outputGrid()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00243">outputPrim()</a>, <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00008">real</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00200">solve()</a>, <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00028">timesss</a> , 以及 <a class="el" href="../../dd/dcb/block_solver_8hpp_source.html#l00038">timesteps</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../df/d44/zone_main_8cpp_source.html#l00250">main()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph.svg" width="406" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a736738d2e404c1e60714d603303a5004" name="a736738d2e404c1e60714d603303a5004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736738d2e404c1e60714d603303a5004">&#9670;&#160;</a></span>stepsLoopDTS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoopDTS </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>基于固定时间步长的时间步循环 </p>
+<p>基于DTS方法的时间步进循环</p>
+<p>使用对角化时间步长(DTS)方法进行时间推进。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00422">422</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00130">EULER</a>, <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00031">GAMMA</a>, <a class="el" href="../../da/dc9/data_8cpp_source.html#l00178">Data::getN()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00225">outputGrid()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00243">outputPrim()</a> , 以及 <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00008">real</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_a736738d2e404c1e60714d603303a5004_cgraph.svg" width="408" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a105bdac2459eedfccd45c99eb4197c5a" name="a105bdac2459eedfccd45c99eb4197c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105bdac2459eedfccd45c99eb4197c5a">&#9670;&#160;</a></span>Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::Test </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试函数 </p>
+<p>执行简单的测试计算并输出结果。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00371">371</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00225">outputGrid()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d8e/class_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a81fe908d17b9bd8de6ded969206c9391" name="a81fe908d17b9bd8de6ded969206c9391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81fe908d17b9bd8de6ded969206c9391">&#9670;&#160;</a></span>timesteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long BlockSolver::timesteps =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时间步数计数器 </p>
+
+<p class="definition">在文件 <a class="el" href="../../dd/dcb/block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="../../dd/dcb/block_solver_8hpp_source.html#l00038">38</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../df/d44/zone_main_8cpp_source.html#l00250">main()</a>, <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00254">stepsLoop()</a> , 以及 <a class="el" href="../../da/d96/block_solver_8cpp_source.html#l00293">stepsLoopCFL()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/include/<a class="el" href="../../dd/dcb/block_solver_8hpp_source.html">blockSolver.hpp</a></li>
+<li>src/src/<a class="el" href="../../da/d96/block_solver_8cpp_source.html">blockSolver.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d0/d8e/class_block_solver.html">BlockSolver</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

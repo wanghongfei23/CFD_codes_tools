@@ -1,0 +1,36 @@
+<map id="src/include/eigenSystem.hpp" name="src/include/eigenSystem.hpp">
+<area shape="rect" id="Node000001" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="1095,5,1284,32"/>
+<area shape="rect" id="Node000002" href="$d8/dca/_space_dis_8hpp.html" title="空间离散类定义文件" alt="" coords="541,80,711,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1078,35,712,84,711,78,1082,33"/>
+<area shape="rect" id="Node000008" href="$df/d44/zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="687,379,789,405"/>
+<area shape="poly" id="edge17_Node000001_Node000008" title=" " alt="" coords="1148,38,1120,59,1097,82,1083,103,1076,121,1072,167,1072,244,1070,266,1064,286,1041,319,1007,345,965,364,920,377,873,386,790,393,789,388,872,381,918,372,964,359,1004,340,1037,316,1059,284,1065,265,1067,244,1067,167,1071,120,1079,100,1093,78,1117,55,1143,41"/>
+<area shape="rect" id="Node000015" href="$da/d84/eigen_system_8cpp.html" title="特征系统类的实现文件" alt="" coords="1107,80,1273,107"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1191,46,1192,81,1188,78,1188,50"/>
+<area shape="rect" id="Node000016" href="$d8/df7/reconstructor_8cpp.html" title="重构器类的实现文件" alt="" coords="1297,80,1464,107"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="1238,35,1350,79,1344,79,1237,41"/>
+<area shape="rect" id="Node000017" href="$da/d05/symmetrytest_8cpp.html" title="对称性测试程序实现文件" alt="" coords="1488,80,1614,107"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="1268,33,1491,79,1485,80,1268,38"/>
+<area shape="rect" id="Node000003" href="$dc/d7c/_accuracy_test_8cpp.html" title="精度测试程序实现文件" alt="" coords="5,155,132,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="524,109,144,157,134,159,131,154,143,152,526,104"/>
+<area shape="rect" id="Node000004" href="$dc/d9c/sp__distributor_8hpp.html" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="156,155,347,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="543,112,318,157,316,152,547,108"/>
+<area shape="rect" id="Node000011" href="$de/d8e/_space_dis_8cpp.html" title="空间离散类的实现文件" alt="" coords="371,155,518,181"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="578,114,477,156,475,152,583,112"/>
+<area shape="rect" id="Node000012" href="$df/d38/sp__difference_8cpp.html" title="空间离散差分计算实现文件" alt="" coords="542,155,710,181"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="627,120,628,156,624,153,624,125"/>
+<area shape="rect" id="Node000013" href="$d0/ddc/sp__flux_8cpp.html" title="空间离散通量计算实现文件" alt="" coords="733,155,865,181"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="670,110,771,154,766,154,670,116"/>
+<area shape="rect" id="Node000014" href="$d7/d56/sp__recon_8cpp.html" title="空间离散重构计算实现文件" alt="" coords="889,155,1032,181"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="699,108,905,154,899,155,699,113"/>
+<area shape="rect" id="Node000005" href="$df/d64/initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="169,229,333,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,195,254,230,249,228,250,199"/>
+<area shape="rect" id="Node000010" href="$d6/d9c/sp__distributor_8cpp.html" title="空间分布器类的实现文件" alt="" coords="358,229,526,256"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="299,185,411,228,406,229,299,190"/>
+<area shape="rect" id="Node000006" href="$dd/dcb/block_solver_8hpp.html" title=" " alt="" coords="160,304,342,331"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="253,270,254,305,249,302,250,274"/>
+<area shape="rect" id="Node000009" href="$d5/de2/initializer_8cpp.html" title="初始化器类的实现文件" alt="" coords="366,304,507,331"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="298,259,407,303,401,304,297,265"/>
+<area shape="rect" id="Node000007" href="$da/d96/block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="172,379,330,405"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="253,345,253,380,249,377,249,348"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="351,331,688,381,684,385,351,336"/>
+</map>
