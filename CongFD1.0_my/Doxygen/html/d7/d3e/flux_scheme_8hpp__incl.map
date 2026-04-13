@@ -1,9 +1,0 @@
-<map id="src/include/fluxScheme.hpp" name="src/include/fluxScheme.hpp">
-<area shape="rect" id="Node000001" title="定义通量格式相关的函数和类" alt="" coords="17,5,199,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,56,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,31,57,71,53,67,92,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="79,80,136,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,31,110,65,105,63,106,35"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="160,80,234,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,30,173,70,167,70,123,35"/>
-</map>

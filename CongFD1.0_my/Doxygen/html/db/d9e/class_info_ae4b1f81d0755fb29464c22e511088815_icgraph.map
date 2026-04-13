@@ -1,7 +1,0 @@
-<map id="Info::nPrim" name="Info::nPrim">
-<area shape="rect" id="Node000001" title="获取原始变量数" alt="" coords="225,31,310,57"/>
-<area shape="rect" id="Node000002" href="$db/d9e/class_info.html#ae33f06b39c43b0b638c42726167f67a0" title="获取原始变量名称列表" alt="" coords="5,5,177,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,36,177,34,177,28,212,35"/>
-<area shape="rect" id="Node000003" href="$d1/d6e/class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="19,56,163,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,53,163,62,163,56,212,52"/>
-</map>
