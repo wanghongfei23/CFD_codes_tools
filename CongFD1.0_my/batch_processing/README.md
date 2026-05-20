@@ -90,15 +90,25 @@ info_"算例名称"_"插值方法".txt
 
 #### 二维算例
 
-| 编号 | 算例名称              | 说明              |
-|------|-----------------------|-------------------|
-| 0    | 2D_Riemann_1          | 二维黎曼问题1     |
-| 1    | 2D_Riemann_2          | 二维黎曼问题2-涡 |
-| 2    | implosion             | 内爆问题          |
-| 3    | RTI                   | 瑞利-泰勒不稳定性 |
-| 4    | Double_Mach           | 双马赫反射        |
-| 5    | 2D_Riemann_3          | 二维黎曼问题3     |
-| 6    | KHI                   | 开尔文-亥姆霍兹不稳定性 |
+**参考文献**: Schulz-Rinne, C. W., Collins, J. P., & Glaz, H. M. (2004). 
+"Numerical Solution of the Two-Dimensional Riemann Problems for Gas Dynamics". 
+SIAM Journal on Scientific Computing, 25(6), 1895-1917.
+
+| nCase | 算例名称              | 文献对应                    | 说明                      |
+|-------|-----------------------|----------------------------|---------------------------|
+| 0     | 2D_Riemann_Config3    | Configuration 3            | 双激波+接触间断           |
+| 1     | 2D_Riemann_Config4    | Configuration 4 (Vortex)   | 涡旋结构                  |
+| 2     | implosion             | -                          | 内爆问题                  |
+| 3     | RTI                   | -                          | 瑞利-泰勒不稳定性         |
+| 4     | Double_Mach           | -                          | 双马赫反射                |
+| 5     | 2D_Riemann_Config12   | Configuration 12           | 混合波系                  |
+| 6     | KHI                   | -                          | 开尔文-亥姆霍兹不稳定性   |
+| 7     | 2D_Riemann_Config6    | Configuration 6            | 反向涡旋结构              |
+
+**注意**: 
+- Configuration 编号对应 Schulz-Rinne et al. (2004) 论文中的标准配置
+- Config 4 和 Config 6 的主要区别在于水平速度场方向相反
+- Config 3 和 Config 12 都是混合波系但初始条件不同
 
 ## 一维与二维问题参数设置差异
 

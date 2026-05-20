@@ -220,14 +220,26 @@ static std::map<int,std::string> exampleStr1D={
     {5,"Double_sparse_wave"}
 };
 
+/**
+ * @brief 二维算例标识到字符串的映射表
+ * 
+ * 参考文献:
+ * - Schulz-Rinne, C. W., Collins, J. P., & Glaz, H. M. (2004). 
+ *   "Numerical Solution of the Two-Dimensional Riemann Problems for Gas Dynamics"
+ *   SIAM Journal on Scientific Computing, 25(6), 1895-1917.
+ * 
+ * 该文献系统研究了19种不同的二维黎曼问题配置(Configuration 1-19)。
+ * 本代码实现了其中常用的几种配置。
+ */
 static std::map<int,std::string> exampleStr2D={
-    {0,"2D_Riemann_1"},
-    {1,"2D_Riemann_2"},
-    {2,"implosion"},
-    {3,"RTI"},
-    {4,"Double_Mach"},
-    {5,"2D_Riemann_3"},
-    {6,"KHI"}
+    {0,"2D_Riemann_Config3"},      // Configuration 3: 双激波+接触间断
+    {1,"2D_Riemann_Config4"},      // Configuration 4: 涡旋结构(Vortex)
+    {2,"implosion"},               // 内爆问题(Implosion Problem)
+    {3,"RTI"},                     // 瑞利-泰勒不稳定性(Rayleigh-Taylor Instability)
+    {4,"Double_Mach"},             // 双马赫反射(Double Mach Reflection)
+    {5,"2D_Riemann_Config12"},     // Configuration 12: 混合波系
+    {6,"KHI"},                     // 开尔文-亥姆霍兹不稳定性(Kelvin-Helmholtz Instability)
+    {7,"2D_Riemann_Config6"}       // Configuration 6: 反向涡旋结构
 };
 
 /**

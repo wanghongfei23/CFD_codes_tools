@@ -194,7 +194,7 @@ void Initializer::solInit(Block* grid,Data* sol)
                 real r,u,p;
                 if (x<0.1)
                 {
-                    r=1;u=0;p=1000;
+                    r=1;u=-2;p=0.4;
                 }
                 else if (x>=0.9)
                 {
@@ -245,7 +245,20 @@ void Initializer::solInit(Block* grid,Data* sol)
         switch (info->nCase)
         {
         case 0:
-            //2D Riemann Problem;
+            /**
+             * @brief 二维黎曼问题 - Configuration 3 (Schulz-Rinne et al., 2004)
+             * 
+             * 特征: 四象限不同状态，产生双激波和接触间断结构
+             * 计算域: x∈[-0.5, 0.5], y∈[-0.5, 0.5]
+             * 初始条件分界线: x=0.3, y=0.3
+             * 
+             * 四象限状态 (ρ, u, v, p):
+             * Q1 (右上): (1.5, 0, 0, 1.5)
+             * Q2 (左上): (0.5323, 1.206, 0, 0.3)
+             * Q3 (左下): (0.138, 1.206, 1.206, 0.029)
+             * Q4 (右下): (0.5323, 0, 1.206, 0.3)
+             */
+            //2D Riemann Problem - Configuration 3;
             tempsol.reserve(grid->icMax[0]*grid->icMax[1]);
             for(int i=0;i<grid->icMax[1];i++)
             for(int j=0;j<grid->icMax[0];j++)
@@ -292,7 +305,22 @@ void Initializer::solInit(Block* grid,Data* sol)
                 else std::cout<<"initialize: length error \n";
             break;
         case 1:
-            //2D Riemann Problem vortex;
+            /**
+             * @brief 二维黎曼问题 - Configuration 4 (Vortex) (Schulz-Rinne et al., 2004)
+             * 
+             * 特征: 产生涡旋结构的黎曼问题配置
+             * 计算域: x∈[-0.5, 0.5], y∈[-0.5, 0.5]
+             * 初始条件分界线: x=0, y=0 (坐标轴)
+             * 
+             * 四象限状态 (ρ, u, v, p):
+             * Q1 (右上): (1.0, 0.75, -0.5, 1.0)
+             * Q2 (左上): (2.0, 0.75, 0.5, 1.0)
+             * Q3 (左下): (1.0, -0.75, 0.5, 1.0)
+             * Q4 (右下): (3.0, -0.75, -0.5, 1.0)
+             * 
+             * 注意: 所有象限压力相同(p=1.0)，速度场形成涡旋结构
+             */
+            //2D Riemann Problem - Configuration 4 (Vortex);
             //x [-0.5,0.5]
             //y [-0.5,0.5]
             tempsol.reserve(grid->icMax[0]*grid->icMax[1]);
@@ -418,7 +446,20 @@ void Initializer::solInit(Block* grid,Data* sol)
             break;
 
         case 5:
-            //2D Riemann Problem another 1;
+            /**
+             * @brief 二维黎曼问题 - Configuration 12 (Schulz-Rinne et al., 2004)
+             * 
+             * 特征: 混合波系结构，包含激波、稀疏波和接触间断
+             * 计算域: x∈[-0.5, 0.5], y∈[-0.5, 0.5]
+             * 初始条件分界线: x=0, y=0 (坐标轴)
+             * 
+             * 四象限状态 (ρ, u, v, p):
+             * Q1 (右上): (0.5313, 0, 0, 0.4)
+             * Q2 (左上): (1.0, 0.7276, 0, 1.0)
+             * Q3 (左下): (0.8, 0, 0, 1.0)
+             * Q4 (右下): (1.0, 0, 0.7276, 1.0)
+             */
+            //2D Riemann Problem - Configuration 12;
             //x [-0.5,0.5]
             //y [-0.5,0.5]
             tempsol.reserve(grid->icMax[0]*grid->icMax[1]);
@@ -453,8 +494,22 @@ void Initializer::solInit(Block* grid,Data* sol)
             break;
         
         case 6:
-        // 目前还是case5
-            //2D Riemann Problem 3;
+            /**
+             * @brief 二维黎曼问题 - Configuration 3 变体 (Schulz-Rinne et al., 2004)
+             * 
+             * 特征: 与 Configuration 3 类似但参数略有不同的配置
+             * 计算域: x∈[-0.5, 0.5], y∈[-0.5, 0.5]
+             * 初始条件分界线: x=0, y=0 (坐标轴)
+             * 
+             * 四象限状态 (ρ, u, v, p):
+             * Q1 (右上): (0.5323, 0, 0, 0.4)
+             * Q2 (左上): (1.0, 0.7276, 0, 1.0)
+             * Q3 (左下): (1.0, 0, 0.7276, 1.0)
+             * Q4 (右下): (0.8, 0, 0, 1.0)
+             * 
+             * 注意: 与 case 5 (Config 12) 的区别在于 Q1 和 Q3 的状态互换
+             */
+            //2D Riemann Problem - Configuration 3 variant;
             //x [-0.5,0.5]
             //y [-0.5,0.5]
             tempsol.reserve(grid->icMax[0]*grid->icMax[1]);
@@ -478,6 +533,58 @@ void Initializer::solInit(Block* grid,Data* sol)
                     {r=1.0;u=0.7276;v=0.0;p=1.0;}
                     else
                     {r=1.0;u=0.0;v=0.7276;p=1.0;}
+                }
+                tempsol.push_back(r);
+                tempsol.push_back(r*u);
+                tempsol.push_back(r*v);
+                tempsol.push_back(1.0/(gamma-1)*p+r*(u*u+v*v)/2);
+            }
+            if (tempsol.size()==sol->size()) sol->setValue(tempsol);
+                else std::cout<<"initialize: length error \n";
+            break;
+        
+        case 7:
+            /**
+             * @brief 二维黎曼问题 - Configuration 6 (Schulz-Rinne et al., 2004)
+             * 
+             * 特征: 反向涡旋结构，与 Configuration 4 速度场方向相反
+             * 计算域: x∈[-0.5, 0.5], y∈[-0.5, 0.5]
+             * 初始条件分界线: x=0, y=0 (坐标轴)
+             * 
+             * 四象限状态 (ρ, u, v, p):
+             * Q1 (右上): (1.0, -0.75, -0.5, 1.0)
+             * Q2 (左上): (2.0, -0.75, 0.5, 1.0)
+             * Q3 (左下): (1.0, 0.75, 0.5, 1.0)
+             * Q4 (右下): (3.0, 0.75, -0.5, 1.0)
+             * 
+             * 注意: 与 case 1 (Config 4) 的区别在于水平速度 u 的符号相反
+             *       Config 4: Q1,Q2 的 u>0; Q3,Q4 的 u<0
+             *       Config 6: Q1,Q2 的 u<0; Q3,Q4 的 u>0
+             */
+            //2D Riemann Problem - Configuration 6 (Reverse Vortex);
+            //x [-0.5,0.5]
+            //y [-0.5,0.5]
+            tempsol.reserve(grid->icMax[0]*grid->icMax[1]);
+            for(int i=0;i<grid->icMax[1];i++)
+            for(int j=0;j<grid->icMax[0];j++)
+            {
+                real x=(*grid)(i*grid->icMax[0]+j,0);
+                real y=(*grid)(i*grid->icMax[0]+j,1);
+                real gamma=GAMMA;
+                real r,u,v,p;
+                if (x>0.0)
+                {
+                    if (y>0.0)
+                    {r=1.0;u=-0.75;v=-0.5;p=1.0;}
+                    else
+                    {r=3.0;u= 0.75;v=-0.5;p=1.0;}
+                }
+                else
+                {
+                    if (y>0)
+                    {r=2.0;u=-0.75;v= 0.5;p=1.0;}
+                    else
+                    {r=1.0;u= 0.75;v= 0.5;p=1.0;}
                 }
                 tempsol.push_back(r);
                 tempsol.push_back(r*u);

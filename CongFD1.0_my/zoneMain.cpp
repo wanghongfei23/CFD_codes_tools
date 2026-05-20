@@ -29,15 +29,24 @@ static std::map<int,std::string> exampleStr1D={
 
 /**
  * @brief 二维算例标识到字符串的映射表
+ * 
+ * 参考文献:
+ * - Schulz-Rinne, C. W., Collins, J. P., & Glaz, H. M. (2004). 
+ *   "Numerical Solution of the Two-Dimensional Riemann Problems for Gas Dynamics"
+ *   SIAM Journal on Scientific Computing, 25(6), 1895-1917.
+ * 
+ * 该文献系统研究了19种不同的二维黎曼问题配置(Configuration 1-19)。
+ * 本代码实现了其中常用的几种配置。
  */
 static std::map<int,std::string> exampleStr2D={
-    {0,"2D_Riemann_1"},
-    {1,"2D_Riemann_2"},
-    {2,"implosion"},
-    {3,"RTI"},
-    {4,"Double_Mach"},
-    {5,"2D_Riemann_3"},
-    {6,"KHI"}
+    {0,"2D_Riemann_Config3"},      // Configuration 3: 双激波+接触间断
+    {1,"2D_Riemann_Config4"},      // Configuration 4: 涡旋结构(Vortex)
+    {2,"implosion"},               // 内爆问题(Implosion Problem)
+    {3,"RTI"},                     // 瑞利-泰勒不稳定性(Rayleigh-Taylor Instability)
+    {4,"Double_Mach"},             // 双马赫反射(Double Mach Reflection)
+    {5,"2D_Riemann_Config12"},     // Configuration 12: 混合波系
+    {6,"KHI"},                     // 开尔文-亥姆霍兹不稳定性(Kelvin-Helmholtz Instability)
+    {7,"2D_Riemann_Config6"}       // Configuration 6: 反向涡旋结构
 };
 
 /**
@@ -158,7 +167,11 @@ void configureCase(Info* info, int choice) {
             std::cout << "Configured: Double sparse wave problem\n";
             break;
             
-        case 10: // 2D Riemann 1
+        case 10: // 2D Riemann Configuration 3
+            /**
+             * 二维黎曼问题 - Configuration 3 (Schulz-Rinne et al., 2004)
+             * 特征: 双激波+接触间断结构
+             */
             info->endStep = 1;
             info->outputDt = 0.8;
             info->CFL = 0.5;
@@ -166,10 +179,14 @@ void configureCase(Info* info, int choice) {
             info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
             info->iMax = { 401, 401, 2 };
             info->dim = 2;
-            std::cout << "Configured: 2D Riemann 1 problem\n";
+            std::cout << "Configured: 2D Riemann Configuration 3 problem\n";
             break;
             
-        case 11: // 2D Riemann 2
+        case 11: // 2D Riemann Configuration 4 (Vortex)
+            /**
+             * 二维黎曼问题 - Configuration 4 (Schulz-Rinne et al., 2004)
+             * 特征: 涡旋结构，四象限速度场形成旋转流动
+             */
             info->endStep = 1;
             info->outputDt = 0.3;
             info->CFL = 0.5;
@@ -177,7 +194,7 @@ void configureCase(Info* info, int choice) {
             info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
             info->iMax = { 801, 801, 2 };
             info->dim = 2;
-            std::cout << "Configured: 2D Riemann 2 problem\n";
+            std::cout << "Configured: 2D Riemann Configuration 4 problem\n";
             break;
             
         case 12: // Implosion
@@ -219,7 +236,11 @@ void configureCase(Info* info, int choice) {
             std::cout << "Configured: Double Mach problem\n";
             break;
             
-        case 15: // 2D Riemann 3
+        case 15: // 2D Riemann Configuration 12
+            /**
+             * 二维黎曼问题 - Configuration 12 (Schulz-Rinne et al., 2004)
+             * 特征: 混合波系结构，包含激波、稀疏波和接触间断
+             */
             info->endStep = 1;
             info->outputDt = 0.25;
             info->CFL = 0.5;
@@ -227,10 +248,14 @@ void configureCase(Info* info, int choice) {
             info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
             info->iMax = { 801, 801, 2 };
             info->dim = 2;
-            std::cout << "Configured: 2D Riemann 3 problem\n";
+            std::cout << "Configured: 2D Riemann Configuration 12 problem\n";
             break;
             
         case 16: // KHI
+            /**
+             * 开尔文-亥姆霍兹不稳定性 (Kelvin-Helmholtz Instability)
+             * 特征: 剪切层不稳定导致的涡旋形成
+             */
             info->endStep = 1;
             info->outputDt = 0.25; // Adjust as needed
             info->CFL = 0.5;
@@ -239,6 +264,24 @@ void configureCase(Info* info, int choice) {
             info->iMax = { 401, 401, 2 }; // Adjust as needed
             info->dim = 2;
             std::cout << "Configured: KHI problem\n";
+            break;
+            
+        case 17: // 2D Riemann Configuration 6
+            /**
+             * 二维黎曼问题 - Configuration 6 (Schulz-Rinne et al., 2004)
+             * 特征: 反向涡旋结构，与 Configuration 4 速度场方向相反
+             * 注意: Config 4 和 Config 6 的区别在于水平速度 u 的符号相反
+             *       Config 4: Q1,Q2 的 u>0; Q3,Q4 的 u<0
+             *       Config 6: Q1,Q2 的 u<0; Q3,Q4 的 u>0
+             */
+            info->endStep = 1;
+            info->outputDt = 0.3;
+            info->CFL = 0.5;
+            info->nCase = 7;
+            info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
+            info->iMax = { 401, 401, 2 };
+            info->dim = 2;
+            std::cout << "Configured: 2D Riemann Configuration 6 problem\n";
             break;
     }
 }
@@ -283,7 +326,7 @@ int main()
 
     // info->interMethod = WCNS5CONGZ;//【TENO-S】   Teno5_CongZ
     // 临时改成5-9
-    info->interMethod = WHFTCNSA; //【TENO-A】TENO-A
+    // info->interMethod = WHFTCNSA; //【TENO-A】TENO-A
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
     // info->interMethod = WHFTCNSASF102;
@@ -298,7 +341,8 @@ int main()
 
     // info->interMethod = WHFTCNSASF202_2S;
     // info->interMethod = WHFTCNSASF202;
-    // info->interMethod = WHFTCNSASFf_5_10;
+    // 已经临时改成了1.732系数
+    info->interMethod = WHFTCNSASFf_5_10;
     // info->interMethod = WHFTCNSASFf_5_9;
     // info->interMethod = WHFTCNSASFf2_test;
     // info->interMethod = WHFTCNSASFf3_test;
@@ -329,16 +373,17 @@ int main()
         // 1;  // ShuOsher
         // 2;  // Lax
         // 3;  // Sedov
-        4;  // Woodward_Colella
+        // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
 
         // 10; // 2D_Riemann_1
         // 11; // 2D_Riemann_2
         // 12; // implosion
         // 13; // RTI
-        // 14; // Double_Mach
+        14; // Double_Mach
         // 15; // 2D_Riemann_3
         // 16; // KHI
+        // 17; // 2D_Riemann_6
     
     // 移除交互式选择，直接使用预设的算例编号
     configureCase(info, presetCase);
