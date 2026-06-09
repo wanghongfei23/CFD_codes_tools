@@ -5,6 +5,7 @@
 
 #include "blockSolver.hpp"
 #include <fstream>
+#include <iomanip>
 
 /**
  * @brief BlockSolver类的默认构造函数
